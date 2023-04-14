@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { DatabaseModule } from './database/database.module';
 import { TypeOrmModule } from "@nestjs/typeorm";
+import { CategoriesModule } from './categories/categories.module';
 import { ConfigModule } from  "@nestjs/config";
 import * as process from "process";
 
@@ -24,7 +25,8 @@ import * as process from "process";
           autoLoadEntities: true,
           entities: [],
           synchronize: true
-      })
+      }),
+      CategoriesModule
   ],
   controllers: [AppController],
   providers: [AppService],
