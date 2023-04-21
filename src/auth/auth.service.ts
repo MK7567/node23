@@ -25,6 +25,6 @@ export class AuthService {
         };
         const accessToken = this.jwtService.sign(payload);
 
-        return user;
+        return accessToken;
     }
 }
