@@ -24,7 +24,7 @@ export class AuthService {
             "sub": user.id
         };
         const accessToken = this.jwtService.sign(payload);
-
-        return accessToken;
+        const tokenString = `Access_token=${accessToken}; HttpOnly; Path=/; Max-Age=1d`
+        return tokenString;
     }
 }
